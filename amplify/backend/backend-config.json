@@ -1,1 +1,10 @@
-{}
+{
+	"auth": {
+		"bastilafbc75e3b905": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"dependsOn": [],
+			"customAuth": false
+		}
+	}
+}

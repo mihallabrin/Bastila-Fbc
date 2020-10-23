@@ -10,6 +10,11 @@
             "StackName": "amplify-bastilafbc-dev-185819",
             "StackId": "arn:aws:cloudformation:us-east-1:716949790370:stack/amplify-bastilafbc-dev-185819/41ff6dd0-1583-11eb-a7ee-12843ea8a65b",
             "AmplifyAppId": "d2ps0bo2qb7w2o"
+        },
+        "categories": {
+            "auth": {
+                "bastilafbc75e3b905": {}
+            }
         }
     }
 }
