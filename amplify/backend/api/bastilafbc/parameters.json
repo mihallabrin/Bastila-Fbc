@@ -1,0 +1,11 @@
+{
+    "AppSyncApiName": "bastilafbc",
+    "DynamoDBBillingMode": "PAY_PER_REQUEST",
+    "DynamoDBEnableServerSideEncryption": false,
+    "AuthCognitoUserPoolId": {
+        "Fn::GetAtt": [
+            "authbastilafbc75e3b905",
+            "Outputs.UserPoolId"
+        ]
+    }
+}
