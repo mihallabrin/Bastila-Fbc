@@ -1,4 +1,5 @@
 import React from 'react';
+import { withAuthenticator } from '@aws-amplify/ui-react'
 
 import './App.css';
 
@@ -10,4 +11,4 @@ function App() {
   );
 }
 
-export default App;
+export default withAuthenticator(App);
