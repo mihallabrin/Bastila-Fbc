@@ -17,11 +17,13 @@ export const createBlog = /* GraphQL */ `
           blogID
           createdAt
           updatedAt
+          owner
         }
         nextToken
       }
       createdAt
       updatedAt
+      owner
     }
   }
 `;
@@ -40,11 +42,13 @@ export const updateBlog = /* GraphQL */ `
           blogID
           createdAt
           updatedAt
+          owner
         }
         nextToken
       }
       createdAt
       updatedAt
+      owner
     }
   }
 `;
@@ -63,11 +67,13 @@ export const deleteBlog = /* GraphQL */ `
           blogID
           createdAt
           updatedAt
+          owner
         }
         nextToken
       }
       createdAt
       updatedAt
+      owner
     }
   }
 `;
@@ -88,6 +94,7 @@ export const createPost = /* GraphQL */ `
         }
         createdAt
         updatedAt
+        owner
       }
       comments {
         items {
@@ -96,11 +103,13 @@ export const createPost = /* GraphQL */ `
           content
           createdAt
           updatedAt
+          owner
         }
         nextToken
       }
       createdAt
       updatedAt
+      owner
     }
   }
 `;
@@ -121,6 +130,7 @@ export const updatePost = /* GraphQL */ `
         }
         createdAt
         updatedAt
+        owner
       }
       comments {
         items {
@@ -129,11 +139,13 @@ export const updatePost = /* GraphQL */ `
           content
           createdAt
           updatedAt
+          owner
         }
         nextToken
       }
       createdAt
       updatedAt
+      owner
     }
   }
 `;
@@ -154,6 +166,7 @@ export const deletePost = /* GraphQL */ `
         }
         createdAt
         updatedAt
+        owner
       }
       comments {
         items {
@@ -162,11 +175,13 @@ export const deletePost = /* GraphQL */ `
           content
           createdAt
           updatedAt
+          owner
         }
         nextToken
       }
       createdAt
       updatedAt
+      owner
     }
   }
 `;
@@ -187,16 +202,19 @@ export const createComment = /* GraphQL */ `
           name
           createdAt
           updatedAt
+          owner
         }
         comments {
           nextToken
         }
         createdAt
         updatedAt
+        owner
       }
       content
       createdAt
       updatedAt
+      owner
     }
   }
 `;
@@ -217,16 +235,19 @@ export const updateComment = /* GraphQL */ `
           name
           createdAt
           updatedAt
+          owner
         }
         comments {
           nextToken
         }
         createdAt
         updatedAt
+        owner
       }
       content
       createdAt
       updatedAt
+      owner
     }
   }
 `;
@@ -247,16 +268,19 @@ export const deleteComment = /* GraphQL */ `
           name
           createdAt
           updatedAt
+          owner
         }
         comments {
           nextToken
         }
         createdAt
         updatedAt
+        owner
       }
       content
       createdAt
       updatedAt
+      owner
     }
   }
 `;

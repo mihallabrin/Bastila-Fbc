@@ -14,11 +14,13 @@ export const getBlog = /* GraphQL */ `
           blogID
           createdAt
           updatedAt
+          owner
         }
         nextToken
       }
       createdAt
       updatedAt
+      owner
     }
   }
 `;
@@ -37,6 +39,7 @@ export const listBlogs = /* GraphQL */ `
         }
         createdAt
         updatedAt
+        owner
       }
       nextToken
     }
@@ -56,6 +59,7 @@ export const getPost = /* GraphQL */ `
         }
         createdAt
         updatedAt
+        owner
       }
       comments {
         items {
@@ -64,11 +68,13 @@ export const getPost = /* GraphQL */ `
           content
           createdAt
           updatedAt
+          owner
         }
         nextToken
       }
       createdAt
       updatedAt
+      owner
     }
   }
 `;
@@ -88,12 +94,14 @@ export const listPosts = /* GraphQL */ `
           name
           createdAt
           updatedAt
+          owner
         }
         comments {
           nextToken
         }
         createdAt
         updatedAt
+        owner
       }
       nextToken
     }
@@ -113,16 +121,19 @@ export const getComment = /* GraphQL */ `
           name
           createdAt
           updatedAt
+          owner
         }
         comments {
           nextToken
         }
         createdAt
         updatedAt
+        owner
       }
       content
       createdAt
       updatedAt
+      owner
     }
   }
 `;
@@ -142,10 +153,12 @@ export const listComments = /* GraphQL */ `
           blogID
           createdAt
           updatedAt
+          owner
         }
         content
         createdAt
         updatedAt
+        owner
       }
       nextToken
     }

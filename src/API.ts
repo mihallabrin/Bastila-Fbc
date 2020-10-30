@@ -172,11 +172,13 @@ export type CreateBlogMutation = {
         blogID: string,
         createdAt: string,
         updatedAt: string,
+        owner: string | null,
       } | null > | null,
       nextToken: string | null,
     } | null,
     createdAt: string,
     updatedAt: string,
+    owner: string | null,
   } | null,
 };
 
@@ -199,11 +201,13 @@ export type UpdateBlogMutation = {
         blogID: string,
         createdAt: string,
         updatedAt: string,
+        owner: string | null,
       } | null > | null,
       nextToken: string | null,
     } | null,
     createdAt: string,
     updatedAt: string,
+    owner: string | null,
   } | null,
 };
 
@@ -226,11 +230,13 @@ export type DeleteBlogMutation = {
         blogID: string,
         createdAt: string,
         updatedAt: string,
+        owner: string | null,
       } | null > | null,
       nextToken: string | null,
     } | null,
     createdAt: string,
     updatedAt: string,
+    owner: string | null,
   } | null,
 };
 
@@ -255,6 +261,7 @@ export type CreatePostMutation = {
       } | null,
       createdAt: string,
       updatedAt: string,
+      owner: string | null,
     } | null,
     comments:  {
       __typename: "ModelCommentConnection",
@@ -265,11 +272,13 @@ export type CreatePostMutation = {
         content: string,
         createdAt: string,
         updatedAt: string,
+        owner: string | null,
       } | null > | null,
       nextToken: string | null,
     } | null,
     createdAt: string,
     updatedAt: string,
+    owner: string | null,
   } | null,
 };
 
@@ -294,6 +303,7 @@ export type UpdatePostMutation = {
       } | null,
       createdAt: string,
       updatedAt: string,
+      owner: string | null,
     } | null,
     comments:  {
       __typename: "ModelCommentConnection",
@@ -304,11 +314,13 @@ export type UpdatePostMutation = {
         content: string,
         createdAt: string,
         updatedAt: string,
+        owner: string | null,
       } | null > | null,
       nextToken: string | null,
     } | null,
     createdAt: string,
     updatedAt: string,
+    owner: string | null,
   } | null,
 };
 
@@ -333,6 +345,7 @@ export type DeletePostMutation = {
       } | null,
       createdAt: string,
       updatedAt: string,
+      owner: string | null,
     } | null,
     comments:  {
       __typename: "ModelCommentConnection",
@@ -343,11 +356,13 @@ export type DeletePostMutation = {
         content: string,
         createdAt: string,
         updatedAt: string,
+        owner: string | null,
       } | null > | null,
       nextToken: string | null,
     } | null,
     createdAt: string,
     updatedAt: string,
+    owner: string | null,
   } | null,
 };
 
@@ -372,6 +387,7 @@ export type CreateCommentMutation = {
         name: string,
         createdAt: string,
         updatedAt: string,
+        owner: string | null,
       } | null,
       comments:  {
         __typename: "ModelCommentConnection",
@@ -379,10 +395,12 @@ export type CreateCommentMutation = {
       } | null,
       createdAt: string,
       updatedAt: string,
+      owner: string | null,
     } | null,
     content: string,
     createdAt: string,
     updatedAt: string,
+    owner: string | null,
   } | null,
 };
 
@@ -407,6 +425,7 @@ export type UpdateCommentMutation = {
         name: string,
         createdAt: string,
         updatedAt: string,
+        owner: string | null,
       } | null,
       comments:  {
         __typename: "ModelCommentConnection",
@@ -414,10 +433,12 @@ export type UpdateCommentMutation = {
       } | null,
       createdAt: string,
       updatedAt: string,
+      owner: string | null,
     } | null,
     content: string,
     createdAt: string,
     updatedAt: string,
+    owner: string | null,
   } | null,
 };
 
@@ -442,6 +463,7 @@ export type DeleteCommentMutation = {
         name: string,
         createdAt: string,
         updatedAt: string,
+        owner: string | null,
       } | null,
       comments:  {
         __typename: "ModelCommentConnection",
@@ -449,10 +471,12 @@ export type DeleteCommentMutation = {
       } | null,
       createdAt: string,
       updatedAt: string,
+      owner: string | null,
     } | null,
     content: string,
     createdAt: string,
     updatedAt: string,
+    owner: string | null,
   } | null,
 };
 
@@ -474,11 +498,13 @@ export type GetBlogQuery = {
         blogID: string,
         createdAt: string,
         updatedAt: string,
+        owner: string | null,
       } | null > | null,
       nextToken: string | null,
     } | null,
     createdAt: string,
     updatedAt: string,
+    owner: string | null,
   } | null,
 };
 
@@ -501,6 +527,7 @@ export type ListBlogsQuery = {
       } | null,
       createdAt: string,
       updatedAt: string,
+      owner: string | null,
     } | null > | null,
     nextToken: string | null,
   } | null,
@@ -526,6 +553,7 @@ export type GetPostQuery = {
       } | null,
       createdAt: string,
       updatedAt: string,
+      owner: string | null,
     } | null,
     comments:  {
       __typename: "ModelCommentConnection",
@@ -536,11 +564,13 @@ export type GetPostQuery = {
         content: string,
         createdAt: string,
         updatedAt: string,
+        owner: string | null,
       } | null > | null,
       nextToken: string | null,
     } | null,
     createdAt: string,
     updatedAt: string,
+    owner: string | null,
   } | null,
 };
 
@@ -564,6 +594,7 @@ export type ListPostsQuery = {
         name: string,
         createdAt: string,
         updatedAt: string,
+        owner: string | null,
       } | null,
       comments:  {
         __typename: "ModelCommentConnection",
@@ -571,6 +602,7 @@ export type ListPostsQuery = {
       } | null,
       createdAt: string,
       updatedAt: string,
+      owner: string | null,
     } | null > | null,
     nextToken: string | null,
   } | null,
@@ -596,6 +628,7 @@ export type GetCommentQuery = {
         name: string,
         createdAt: string,
         updatedAt: string,
+        owner: string | null,
       } | null,
       comments:  {
         __typename: "ModelCommentConnection",
@@ -603,10 +636,12 @@ export type GetCommentQuery = {
       } | null,
       createdAt: string,
       updatedAt: string,
+      owner: string | null,
     } | null,
     content: string,
     createdAt: string,
     updatedAt: string,
+    owner: string | null,
   } | null,
 };
 
@@ -630,13 +665,19 @@ export type ListCommentsQuery = {
         blogID: string,
         createdAt: string,
         updatedAt: string,
+        owner: string | null,
       } | null,
       content: string,
       createdAt: string,
       updatedAt: string,
+      owner: string | null,
     } | null > | null,
     nextToken: string | null,
   } | null,
+};
+
+export type OnCreateBlogSubscriptionVariables = {
+  owner: string,
 };
 
 export type OnCreateBlogSubscription = {
@@ -653,12 +694,18 @@ export type OnCreateBlogSubscription = {
         blogID: string,
         createdAt: string,
         updatedAt: string,
+        owner: string | null,
       } | null > | null,
       nextToken: string | null,
     } | null,
     createdAt: string,
     updatedAt: string,
+    owner: string | null,
   } | null,
+};
+
+export type OnUpdateBlogSubscriptionVariables = {
+  owner: string,
 };
 
 export type OnUpdateBlogSubscription = {
@@ -675,12 +722,18 @@ export type OnUpdateBlogSubscription = {
         blogID: string,
         createdAt: string,
         updatedAt: string,
+        owner: string | null,
       } | null > | null,
       nextToken: string | null,
     } | null,
     createdAt: string,
     updatedAt: string,
+    owner: string | null,
   } | null,
+};
+
+export type OnDeleteBlogSubscriptionVariables = {
+  owner: string,
 };
 
 export type OnDeleteBlogSubscription = {
@@ -697,12 +750,18 @@ export type OnDeleteBlogSubscription = {
         blogID: string,
         createdAt: string,
         updatedAt: string,
+        owner: string | null,
       } | null > | null,
       nextToken: string | null,
     } | null,
     createdAt: string,
     updatedAt: string,
+    owner: string | null,
   } | null,
+};
+
+export type OnCreatePostSubscriptionVariables = {
+  owner: string,
 };
 
 export type OnCreatePostSubscription = {
@@ -721,6 +780,7 @@ export type OnCreatePostSubscription = {
       } | null,
       createdAt: string,
       updatedAt: string,
+      owner: string | null,
     } | null,
     comments:  {
       __typename: "ModelCommentConnection",
@@ -731,12 +791,18 @@ export type OnCreatePostSubscription = {
         content: string,
         createdAt: string,
         updatedAt: string,
+        owner: string | null,
       } | null > | null,
       nextToken: string | null,
     } | null,
     createdAt: string,
     updatedAt: string,
+    owner: string | null,
   } | null,
+};
+
+export type OnUpdatePostSubscriptionVariables = {
+  owner: string,
 };
 
 export type OnUpdatePostSubscription = {
@@ -755,6 +821,7 @@ export type OnUpdatePostSubscription = {
       } | null,
       createdAt: string,
       updatedAt: string,
+      owner: string | null,
     } | null,
     comments:  {
       __typename: "ModelCommentConnection",
@@ -765,12 +832,18 @@ export type OnUpdatePostSubscription = {
         content: string,
         createdAt: string,
         updatedAt: string,
+        owner: string | null,
       } | null > | null,
       nextToken: string | null,
     } | null,
     createdAt: string,
     updatedAt: string,
+    owner: string | null,
   } | null,
+};
+
+export type OnDeletePostSubscriptionVariables = {
+  owner: string,
 };
 
 export type OnDeletePostSubscription = {
@@ -789,6 +862,7 @@ export type OnDeletePostSubscription = {
       } | null,
       createdAt: string,
       updatedAt: string,
+      owner: string | null,
     } | null,
     comments:  {
       __typename: "ModelCommentConnection",
@@ -799,12 +873,18 @@ export type OnDeletePostSubscription = {
         content: string,
         createdAt: string,
         updatedAt: string,
+        owner: string | null,
       } | null > | null,
       nextToken: string | null,
     } | null,
     createdAt: string,
     updatedAt: string,
+    owner: string | null,
   } | null,
+};
+
+export type OnCreateCommentSubscriptionVariables = {
+  owner: string,
 };
 
 export type OnCreateCommentSubscription = {
@@ -823,6 +903,7 @@ export type OnCreateCommentSubscription = {
         name: string,
         createdAt: string,
         updatedAt: string,
+        owner: string | null,
       } | null,
       comments:  {
         __typename: "ModelCommentConnection",
@@ -830,11 +911,17 @@ export type OnCreateCommentSubscription = {
       } | null,
       createdAt: string,
       updatedAt: string,
+      owner: string | null,
     } | null,
     content: string,
     createdAt: string,
     updatedAt: string,
+    owner: string | null,
   } | null,
+};
+
+export type OnUpdateCommentSubscriptionVariables = {
+  owner: string,
 };
 
 export type OnUpdateCommentSubscription = {
@@ -853,6 +940,7 @@ export type OnUpdateCommentSubscription = {
         name: string,
         createdAt: string,
         updatedAt: string,
+        owner: string | null,
       } | null,
       comments:  {
         __typename: "ModelCommentConnection",
@@ -860,11 +948,17 @@ export type OnUpdateCommentSubscription = {
       } | null,
       createdAt: string,
       updatedAt: string,
+      owner: string | null,
     } | null,
     content: string,
     createdAt: string,
     updatedAt: string,
+    owner: string | null,
   } | null,
+};
+
+export type OnDeleteCommentSubscriptionVariables = {
+  owner: string,
 };
 
 export type OnDeleteCommentSubscription = {
@@ -883,6 +977,7 @@ export type OnDeleteCommentSubscription = {
         name: string,
         createdAt: string,
         updatedAt: string,
+        owner: string | null,
       } | null,
       comments:  {
         __typename: "ModelCommentConnection",
@@ -890,9 +985,11 @@ export type OnDeleteCommentSubscription = {
       } | null,
       createdAt: string,
       updatedAt: string,
+      owner: string | null,
     } | null,
     content: string,
     createdAt: string,
     updatedAt: string,
+    owner: string | null,
   } | null,
 };
