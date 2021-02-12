@@ -30,6 +30,51 @@
     "EmptyResource": {
       "Type": "Custom::EmptyResource",
       "Condition": "AlwaysFalse"
+    },
+    "BlogTableDataSource": {
+      "Type": "AWS::AppSync::DataSource",
+      "Properties": {
+        "ApiId": {
+          "Ref": "AppSyncApiId"
+        },
+        "DynamoDBConfig": {
+          "AwsRegion": "us-east-1",
+          "TableName": "BlogTable"
+        },
+        "Name": "BlogTable",
+        "ServiceRoleArn": "",
+        "Type": "AMAZON_DYNAMODB"
+      }
+    },
+    "CommentsTableDataSource": {
+      "Type": "AWS::AppSync::DataSource",
+      "Properties": {
+        "ApiId": {
+          "Ref": "AppSyncApiId"
+        },
+        "DynamoDBConfig": {
+          "AwsRegion": "us-east-1",
+          "TableName": "CommentsTable"
+        },
+        "Name": "CommentsTable",
+        "ServiceRoleArn": "WhatToPutHere",
+        "Type": "AMAZON_DYNAMODB"
+      }
+    },
+    "PostsTableDataSource": {
+      "Type": "AWS::AppSync::DataSource",
+      "Properties": {
+        "ApiId": {
+          "Ref": "AppSyncApiId"
+        },
+        "DynamoDBConfig": {
+          "AwsRegion": "us-east-1",
+          "TableName": "PostsTable"
+        },
+        "Name": "PostsTable",
+        "ServiceRoleArn": "",
+        "Type": "AMAZON_DYNAMODB"
+      }
     }
   },
   "Conditions": {
